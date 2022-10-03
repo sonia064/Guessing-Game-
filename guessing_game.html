@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+</head>
+<body>
+    <script>
+        let t = 10;
+        let win = 0;
+        let lost = 0;
+        
+        while(t--)
+        {
+            let num1 = Number(prompt("Enter any number from 1 to 10- "));
+            let randomValue = Math.floor(Math.random()*10) + 1;
+
+            if(num1 === randomValue)
+            {
+                document.write("Yes! I have won the game.Your number and random value is exactly same!<br/>");
+               // console.log("Yes! I have won the game.Your number and random value is exactly same!");
+                win++;
+            }
+            else
+            {
+               // console.log("OHhh...shit! I have lost the game.Random value was - " + randomValue + "<br/>");
+                document.write("OHhh...shit! I have lost the game.Random value was - " + randomValue + "<br/>");
+                lost++;
+            }
+
+        }
+        document.write("Total win - " + win + "<br/>");
+        document.write("Total lost - " + lost + "<br/>");
+
+       // console.log("Total win - " + win + "<br/>");
+      //  console.log("Total lost - " + lost + "<br/>");
+        
+    </script>
+</body>
+</html>
